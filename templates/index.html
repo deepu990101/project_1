@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>emp table</title>
+</head>
+<body>
+    <table align="center" border="2">
+        <tr align="center">
+            <th style="background: yellow" colspan="5">Employee details</th>
+        </tr>
+        <tr>
+            <th> </th>
+            <th>ID no</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Salary</th>
+        </tr>
+        {% for x,y in data.items %}
+            <tr aria-rowspan="3">
+                <td>{{ x }}</td>
+                <td>{{ y.IDno }}</td>
+                <td>{{ y.name }}</td>
+                <td>{{ y.desg }}</td>
+                <td>{{ y.salary }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
